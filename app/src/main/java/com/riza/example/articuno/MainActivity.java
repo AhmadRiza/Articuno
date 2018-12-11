@@ -22,6 +22,7 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.riza.example.articuno.model.Article;
+import com.riza.example.articuno.utils.DialogHelper;
 import com.riza.example.articuno.utils.ENV;
 import com.riza.example.articuno.utils.PrefsHelper;
 
@@ -142,7 +143,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, ProfileActivity.class));
 
                 break;
+            case R.id.menu_info:
 
+                DialogHelper.about(this).show();
+
+                break;
         }
 
         return true;

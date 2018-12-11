@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Articuno</string>
+    <string name="nama_kelompok">-Riza \n -Ulul \n -Riz \n -Ulfa \n -Marimar</string>
 
     <string-array name="categories">
         <item>Technology</item>

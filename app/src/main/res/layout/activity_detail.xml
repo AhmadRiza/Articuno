@@ -57,6 +57,16 @@
                 android:textColor="@color/colorAccent"
                 tools:text="#Sport"
                 />
+
+            <TextView
+                fontPath="fonts/Regular.ttf"
+                android:id="@+id/tv_status"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                tools:text="Archieve"
+                />
             <View
                 android:layout_marginTop="16dp"
                 android:layout_width="200dp"

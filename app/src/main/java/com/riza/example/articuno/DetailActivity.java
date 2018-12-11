@@ -49,13 +49,17 @@ public class DetailActivity extends AppCompatActivity {
         tvTitle.setText(article.getTitle());
 
         TextView tvAuthor = findViewById(R.id.tv_author);
-        tvAuthor.setText(article.getAuthor());
+        tvAuthor.setText("Ditulis oleh : "+article.getAuthor());
 
         TextView tvCategories = findViewById(R.id.tv_categories);
         tvCategories.setText(String.format("#%s", article.getCategories()));
 
         TextView tvContent = findViewById(R.id.tv_content);
         tvContent.setText(article.getContent());
+
+        TextView tvStatus = findViewById(R.id.tv_status);
+        tvStatus.setText(article.getStatus());
+
 
         if(prefsHelper.getUser().getId().equals(article.getUserId())){
             findViewById(R.id.layout_edit).setVisibility(View.VISIBLE);

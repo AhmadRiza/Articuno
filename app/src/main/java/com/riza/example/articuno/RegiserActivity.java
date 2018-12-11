@@ -37,6 +37,7 @@ public class RegiserActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Daftar");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         edNama = findViewById(R.id.ed_nama);
         edPassword= findViewById(R.id.ed_password);

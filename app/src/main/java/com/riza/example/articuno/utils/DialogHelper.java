@@ -25,10 +25,10 @@ public class DialogHelper {
                                        DialogInterface.OnClickListener yes){
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Apa anda yakin?");
+        builder.setTitle("Peringatan");
         builder.setMessage(message);
         builder.setPositiveButton("Ya", yes );
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
@@ -54,14 +54,31 @@ public class DialogHelper {
         layout.addView(edCategory);
         builder.setView(layout);
 
-        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Tambahkan", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
                 yes.onClickOk(edCategory.getText().toString().trim());
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        return builder.create();
+
+    }
+
+    public static  AlertDialog about(Context context){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Dibuat oleh:");
+
+        builder.setView(R.layout.dialog_about);
+
+        builder.setPositiveButton("Tutup", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
